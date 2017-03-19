@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=PT+Serif:400i");
 * {
   margin: 0;
@@ -8,7 +8,7 @@
 .container {
   width: 100%;
   height: auto;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -129,50 +129,57 @@ button {
   border: none;
   margin: 25px auto; }
 
-header .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  font-size: 15px;
-  font-size: 1.5rem;
-  border-bottom: 1px solid grey;
-  padding: 15px;
-  color: white;
-  background-color: black; }
-  header .row ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    font-size: 7px;
-    font-size: 0.7rem;
-    list-style: none; }
-  header .row li {
-    padding: 15px; }
-  header .row a {
-    text-transform: uppercase;
-    color: white; }
-
-.hero {
-  background-image: url(images/hero-background.jpg);
+header {
+  background-image: url(images/hero-background1.jpg);
   background-repeat: none;
   background-size: cover; }
-  .hero .container {
-    width: 80%;
+  header .row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    padding: 7%;
+    flex-direction: row;
+    font-size: 10px;
+    font-size: 1rem;
+    border-bottom: 1px solid grey;
+    padding: 15px;
     color: white; }
-    .hero .container h1 {
-      font-size: 25px;
-      font-size: 2.5rem; }
-    .hero .container p {
+    header .row ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
       font-size: 7px;
       font-size: 0.7rem;
-      text-align: center; }
+      list-style: none; }
+    header .row li {
+      padding: 15px; }
+    header .row a {
+      text-transform: uppercase;
+      color: white; }
+    header .row h2 {
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.5); }
+      header .row h2 .box {
+        font-weight: 200;
+        color: white; }
+
+.hero .container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 300;
+  padding: 7%;
+  color: white; }
+  .hero .container h1 {
+    font-size: 25px;
+    font-size: 2.5rem; }
+  .hero .container p {
+    font-size: 7px;
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 20px; }
 
 .icons {
   text-align: center;
@@ -190,10 +197,33 @@ header .row {
     font-size: 2.3rem;
     padding: 20px; }
 
-.gallery img {
-  display: block;
+.gallery [class*="col-"] {
+  position: relative; }
+.gallery .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 7px;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(234, 90, 90, 0.8);
+  opacity: 1;
+  z-index: 10;
+  transition: 0.7s;
   border-right: 1px solid white;
   border-bottom: 1px solid white; }
+.gallery img {
+  display: block;
+  width: 100%;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white; }
+.gallery photo {
+  position: relative;
+  z-index: 1; }
 
 .staff .row {
   width: 80%;
@@ -229,6 +259,7 @@ header .row {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  align-items: flex-start;
   margin: 3% auto;
   width: 80%;
   padding: 3% 0; }
@@ -238,8 +269,9 @@ header .row {
   font-size: 15px;
   font-size: 1.5rem; }
 .carousel h6 {
-  padding: 10px;
-  text-align: left; }
+  padding: 15px 0;
+  font-size: 6px;
+  font-size: 0.6rem; }
 
 .slogan {
   text-align: center;
@@ -257,6 +289,9 @@ header .row {
   background-color: #3A3E64;
   color: white;
   text-align: center;
+  font-weight: 300;
+  font-size: 7px;
+  font-size: 0.7rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -264,7 +299,9 @@ header .row {
   align-items: flex-start; }
   .footer .row {
     width: 80%;
-    margin: 20px auto; }
+    margin: 30px auto; }
+  .footer h4 {
+    padding: 10px; }
   .footer .social {
     margin: 10px auto; }
     .footer .social .fa {
@@ -277,8 +314,8 @@ header .row {
 
 .copyrights {
   background-color: #313454;
-  font-size: 7px;
-  font-size: 0.7rem;
+  font-size: 6px;
+  font-size: 0.6rem;
   text-align: center;
   color: grey;
   padding: 10px 0; }
