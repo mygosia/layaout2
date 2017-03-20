@@ -107,7 +107,7 @@ button
     color: white
     text-transform: uppercase
     @include font(0.5)
-    padding: 10px 20px
+    padding: 10px 30px
     border: none
     margin: 25px auto
 
@@ -137,6 +137,7 @@ header
                 font-weight: 200
                 color: white
 
+
 .hero
     .container
         width: 80%
@@ -144,11 +145,11 @@ header
         font-weight: 300
         padding: 7% 
         color: white
+        text-align: center
         h1
             @include font(2.5)
         p
-            @include font(0.7)
-            text-align: center
+            @include font(0.7)            
             padding: 20px
         
 .icons
@@ -176,8 +177,8 @@ header
         color: white
         @include font(0.7)
         @include flexbox ($flex-direction: column)
-        background-color: rgba(234, 90, 90, 0.8)
-        opacity: 1
+        background-color: rgba(226, 15, 15, 0.8)
+        opacity: 0
         z-index: 10
         transition: 0.7s
         border-right: 1px solid white
@@ -200,6 +201,8 @@ header
         padding: 25px
         h4
             padding: 8px 0
+            font-weight: 400
+            text-transform: capitalize
         h6
             color: $color-accent
             text-transform: uppercase
@@ -263,8 +266,8 @@ header
         margin: 10px auto
         .fa
             border: 2px solid white
-            @include dims(30px, 30px)
-            line-height: 30px
+            @include dims(30px, 30px)  
+            line-height: 28px
         p
             font-weight: 300
 
@@ -278,3 +281,143 @@ header
         color: $color-accent
     .name
         color: white
+
+@media (min-width: 768px)
+    .col-m-1 
+        @include dims (8.33%, auto) 
+    .col-m-2 
+        @include dims (16.66%, auto) 
+    .col-m-3 
+        @include dims (25%, auto) 
+    .col-m-4 
+        @include dims (33.33%, auto) 
+    .col-m-5 
+        @include dims (41.66%, auto) 
+    .col-m-6 
+        @include dims (50%, auto) 
+    .col-m-7 
+        @include dims (58.33%, auto) 
+    .col-m-8 
+        @include dims (66.66%, auto) 
+    .col-m-9 
+        @include dims (75%, auto) 
+    .col-m-10 
+        @include dims (83.33%, auto) 
+    .col-m-11 
+        @include dims (91.66%, auto) 
+    .col-m-12 
+        @include dims (100%, auto) 
+    nav
+        .row 
+            border: 2px solid red
+
+    input[type="checkbox"] + label 
+        font-size: 25px
+        cursor: pointer
+        display: none
+
+    input
+        display: none
+
+    button:hover
+        color: $color-accent
+        background-color: white
+
+    header
+        li:hover
+            background-color: rgba(255, 255, 255, 0.3)
+
+    .gallery
+        .layer:hover
+            opacity: 1
+
+
+    .staff
+        .member
+            .social
+                .fa:hover
+                    color: white
+                    background-color: $color-accent
+                    border: 2px solid $color-accent
+
+    .social
+        .fa:hover
+            background-color: $color-accent
+
+
+
+@media (max-width: 767px)
+
+    .col-s-1 
+        @include dims (8.33%, auto) 
+    .col-s-2 
+        @include dims (16.66%, auto) 
+    .col-s-3 
+        @include dims (25%, auto) 
+    .col-s-4 
+        @include dims (33.33%, auto) 
+    .col-s-5 
+        @include dims (41.66%, auto) 
+    .col-s-6 
+        @include dims (50%, auto) 
+    .col-s-7 
+        @include dims (58.33%, auto) 
+    .col-s-8 
+        @include dims (66.66%, auto) 
+    .col-s-9 
+        @include dims (75%, auto) 
+    .col-s-10 
+        @include dims (83.33%, auto) 
+    .col-s-11 
+        @include dims (91.66%, auto) 
+    .col-s-12 
+        @include dims (100%, auto)
+
+
+    nav
+        text-align: center
+        .row
+            border: 2px solid yellow
+            ul
+                padding: 0
+        label
+            display: block
+        #menu-button
+            display: none
+        #menu-button:not(:checked) ~ul 
+            display: none
+        #menu-button:checked ~ ul 
+            display: block
+            
+
+    button
+        @include font (1.0)
+
+    button:active
+        color: $color-accent
+        background-color: white
+        cursor: pointer
+
+    header
+        li:active
+            background-color: rgba(255, 255, 255, 0.3)
+            cursor: pointer    
+
+    .gallery
+        .layer:active
+            opacity: 1 
+            cursor: pointer
+
+    .staff
+        .member
+            .social
+                .fa:active
+                    color: white
+                    background-color: $color-accent
+                    border: 2px solid $color-accent
+                    cursor: pointer
+
+    .social
+        .fa:active
+            background-color: $color-accent
+            cursor: pointer
