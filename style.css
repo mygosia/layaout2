@@ -375,9 +375,6 @@ header {
     width: 100%;
     height: auto; }
 
-  nav .row {
-    border: 2px solid red; }
-
   input[type="checkbox"] + label {
     font-size: 25px;
     cursor: pointer;
@@ -454,10 +451,8 @@ header {
 
   nav {
     text-align: center; }
-    nav .row {
-      border: 2px solid yellow; }
-      nav .row ul {
-        padding: 0; }
+    nav .row ul {
+      padding: 0; }
     nav label {
       display: block; }
     nav #menu-button {
