@@ -376,8 +376,13 @@ header
         .row
             ul
                 padding: 0
+            flex-direction: column
+        .menu
+            padding: 10px
+            @include font (1.8)
         label
             display: block
+            @include font (1.5)
         #menu-button
             display: none
         #menu-button:not(:checked) ~ul 
